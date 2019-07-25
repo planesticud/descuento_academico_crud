@@ -13,7 +13,6 @@ Go version >= 1.8.
         - go get github.com/planesticud/descuento_academico_crud
 
 ## Run
-
 Definir los valores de las siguientes variables de entorno:
 
  - `DESCUENTO_ACADEMICO_CRUD_HTTP_PORT`: Puerto asignado para la ejecución del API
