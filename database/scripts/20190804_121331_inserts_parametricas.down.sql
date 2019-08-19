@@ -1,3 +1,2 @@
---delete from descuentos_academicos.tipo_duracion;
---delete from descuentos_academicos.requisito;
---delete from descuentos_academicos.tipo_descuento;
+delete from descuentos_academicos.tipo_duracion;
+delete from descuentos_academicos.tipo_descuento;
