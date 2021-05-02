@@ -16,7 +16,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.ud-repository-api.rule=Host(`campus.planestic.udistrital.edu.co`) && PathPrefix(`/descuento-academico`)"
       - "traefik.http.routers.ud-repository-api.middlewares=ud-repository-api-stripprefix"
-      - "traefik.http.middlewares.ud-repository-api-stripprefix.stripprefix.prefixes=/persona"
+      - "traefik.http.middlewares.ud-repository-api-stripprefix.stripprefix.prefixes=/descuento-academico"
       - "traefik.http.routers.ud-repository-api.tls=true"
       - "traefik.http.routers.ud-repository-api.tls.certresolver=le"
       - "traefik.http.services.ud-repository-api.loadbalancer.server.port=8081"      
