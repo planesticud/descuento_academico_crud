@@ -14,12 +14,12 @@ services:
     command: sh -c 'cd ${API_BASE_DIR}/${API_NAME};go get -v ./...; bee migrate -driver=postgres -conn="postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}/${POSTGRES_DB}?sslmode=disable&search_path=public" || true; bee run -downdoc=true -gendoc=true'
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.ud-repository-api.rule=Host(`campus.planestic.udistrital.edu.co`) && PathPrefix(`/descuento-academico`)"
-      - "traefik.http.routers.ud-repository-api.middlewares=ud-repository-api-stripprefix"
-      - "traefik.http.middlewares.ud-repository-api-stripprefix.stripprefix.prefixes=/descuento-academico"
-      - "traefik.http.routers.ud-repository-api.tls=true"
-      - "traefik.http.routers.ud-repository-api.tls.certresolver=le"
-      - "traefik.http.services.ud-repository-api.loadbalancer.server.port=8081"      
+      - "traefik.http.routers.descuento_academico.rule=Host(`campus.planestic.udistrital.edu.co`) && PathPrefix(`/descuento-academico`)"
+      - "traefik.http.routers.descuento_academico.middlewares=descuento_academico-stripprefix"
+      - "traefik.http.middlewares.descuento_academico-stripprefix.stripprefix.prefixes=/descuento-academico"
+      - "traefik.http.routers.descuento_academico.tls=true"
+      - "traefik.http.routers.descuento_academico.tls.certresolver=le"
+      - "traefik.http.services.descuento_academico.loadbalancer.server.port=8081"      
     networks: 
       - campus_virtual
 
